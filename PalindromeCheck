@@ -1,0 +1,31 @@
+class Solution
+{
+    
+    public bool Palindrome(string one)
+    {
+        // Convert the string to lowercase to make the comparison case-insensitive.
+        one = one.ToLower();
+
+        // Use regular expression to remove any non-alphabetic characters.
+        one = Regex.Replace(one, "[^a-zA-Z]", "");
+
+        // Loop through the characters in the modified string.
+        for (int i = 0; i < one.Length; i++)
+        { 
+            // Check if the character at position 'i' is equal to the character
+            // at the corresponding position from the end of the string.
+            if (one[i] == one[one.Length - i - 1])
+            {
+                // Characters match, continue checking.
+            }
+            else
+            {
+                // Characters don't match, indicating it's not a palindrome.
+                return false;
+            }
+        }
+
+        // If the loop completes without returning false, the string is a palindrome.
+        return true;
+    }
+}
