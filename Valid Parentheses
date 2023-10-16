@@ -1,0 +1,42 @@
+public class Solution
+{
+    public ListNode MergeTwoLists(ListNode list1, ListNode list2)
+    {
+        // Initialize a new ListNode to act as the head of the merged list.
+        ListNode ThirdList= new ListNode(0);
+        ListNode heads = ThirdList;
+
+        // Loop until one of the input lists is fully processed.
+        while(list1 != null && list2 != null ) { 
+            // Compare the values of the current nodes in the input lists.
+            if (list1.val < list2.val)
+            {
+                // If the value in list1 is smaller, append it to the merged list.
+                ThirdList.next = list1;
+                ThirdList = ThirdList.next;
+                list1 = list1.next;
+            } 
+            else if (list1.val >= list2.val)
+            {
+                // If the value in list2 is smaller or equal, append it to the merged list.
+                ThirdList.next = list2;
+                ThirdList = ThirdList.next;
+                list2 = list2.next;
+            }
+        }
+
+        // If there are remaining nodes in list1 or list2, append them to the merged list.
+        if (list1 != null)
+        {
+            ThirdList.next = list1;
+        }
+
+        if (list2 != null)
+        {
+            ThirdList.next = list2;
+        }
+
+        // Return the merged list, excluding the initial dummy node.
+        return heads.next;
+    }
+}
