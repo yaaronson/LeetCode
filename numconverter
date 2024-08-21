@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decimal to Binary Converter</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #fbe9e7;
+            font-family: Arial, sans-serif;
+        }
+
+        .converter-container {
+            text-align: center;
+            border: 1px solid #ff5722;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #ffffff;
+        }
+
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 1em;
+        }
+
+        #result {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="converter-container">
+        <h1>Decimal to Binary Converter</h1>
+        <input type="number" id="decimalInput" placeholder="Enter decimal number" min="0">
+        <button id="convertBtn">Convert</button>
+        <div id="result"></div>
+    </div>
+    <script>
+        document.getElementById('convertBtn').addEventListener('click', function() {
+            const decimal = parseInt(document.getElementById('decimalInput').value, 10);
+            if (!isNaN(decimal) && decimal >= 0) {
+                const binary = decimal.toString(2);
+                document.getElementById('result').textContent = `Binary: ${binary}`;
+            } else {
+                document.getElementById('result').textContent = 'Please enter a valid non-negative decimal number.';
+            }
+        });
+    </script>
+</body>
+</html>
