@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class LongestSubstringWithAtMostTwoDistinctCharacters {
+public class LongestSubstring {
     
     public static int lengthOfLongestSubstringTwoDistinct(String s) {
         if (s == null || s.length() == 0) return 0;
@@ -22,5 +22,16 @@ public class LongestSubstringWithAtMostTwoDistinctCharacters {
                 }
                 left++;
             }
-            
+                        maxLength = Math.max(maxLength, right - left + 1);
+            right++;
+        }
+        
+        return maxLength;
+    }
+    
+    public static void main(String[] args) {
+        String s = "eceba";
+        System.out.println("Length of the longest substring with at most two distinct characters: " + lengthOfLongestSubstringTwoDistinct(s));
+    }
+}
 
