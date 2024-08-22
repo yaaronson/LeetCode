@@ -23,7 +23,7 @@ public class SimpleCalculator {
             }
             
             if (choice < 1 || choice > 5) {
-                System.out.println("Invalid choice. Please enter a number between 1 and 5.");
+                System.out.println("Not Valid. Please enter a number between 1 and 5.");
                 continue;
             }
             
@@ -51,7 +51,7 @@ public class SimpleCalculator {
                         result = num1 / num2;
                         System.out.printf("Result: %.2f\n", result);
                     } else {
-                        System.out.println("Error: Division by zero is not allowed.");
+                        System.out.println("NOt Valid: Division by zero is not allowed.");
                     }
                     break;
                 default:
