@@ -59,3 +59,10 @@ public class ShortestPathInGrid {
         System.out.println("Shortest path cost: " + result);  // Output: 8
     }
 }
+
+Explanation:
+The ShortestPathInGrid Java code finds the shortest path through a grid where each cell has a cost, and some cells might be blocked. 
+It uses a priority queue to explore the grid, starting from the top-left corner and aiming to reach the bottom-right corner with the minimal cost. 
+The priority queue ensures that cells with the lowest accumulated cost are processed first. The code checks all possible directions (right, down, left, up) to move from the current cell, 
+updates the cost if moving to a neighboring cell results in a lower total cost, and marks cells as visited to avoid revisits. If it reaches the target cell, 
+it returns the total cost; if no path exists, it returns -1
