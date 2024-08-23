@@ -18,3 +18,5 @@ public class Solution
         return max;
     }
 }
+
+Explanation: The MaxProfit method calculates the maximum profit that can be achieved from buying and selling a stock on different days. It works by comparing every possible pair of days in the given prices array. For each pair of days (where the first day is before the second), it calculates the profit by subtracting the price on the first day from the price on the second day. If this profit is greater than the current maximum profit, it updates the maximum profit. After evaluating all possible pairs, the method returns the highest profit found. This approach ensures that the maximum possible profit is identified, although it may be less efficient for very large datasets due to its O(n^2) time complexity.
