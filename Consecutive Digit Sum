@@ -21,7 +21,7 @@ public class Program
     public static void Main()
     {
     
-        Console.WriteLine(ConsecutiveDigitSum(123)); // Output: 14
+        Console.WriteLine(ConsecutiveDigitSum(123)); // the output is 14
     }
 }
 
