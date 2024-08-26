@@ -20,7 +20,8 @@ public class Program
 
     public static void Main()
     {
-        // Example usage
+    
         Console.WriteLine(ConsecutiveDigitSum(123)); // Output: 14
     }
 }
+
