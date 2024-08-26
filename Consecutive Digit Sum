@@ -1,0 +1,26 @@
+using System;
+
+public class Program
+{
+    public static int ConsecutiveDigitSum(int n)
+    {
+        int sum = 0;
+        int position = 1;
+
+        while (n > 0)
+        {
+            int digit = n % 10; // Extract the last digit
+            sum += digit * position; // Multiply the digit by its position and add to the sum
+            n /= 10; // Remove the last digit from n
+            position++; // Increment the position
+        }
+
+        return sum;
+    }
+
+    public static void Main()
+    {
+        // Example usage
+        Console.WriteLine(ConsecutiveDigitSum(123)); // Output: 14
+    }
+}
