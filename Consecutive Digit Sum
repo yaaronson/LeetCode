@@ -9,10 +9,10 @@ public class Program
 
         while (n > 0)
         {
-            int digit = n % 10; // Extract the last digit
-            sum += digit * position; // Multiply the digit by its position and add to the sum
+            int digit = n % 10; // Extracts last digit
+            sum += digit * position; 
             n /= 10; // Remove the last digit from n
-            position++; // Increment the position
+            position++; 
         }
 
         return sum;
