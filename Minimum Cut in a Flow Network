@@ -91,3 +91,11 @@ sink = 5
 
 min_cut_edges = g.min_cut(source, sink)
 print("Edges in the minimum cut:", min_cut_edges)
+
+
+Explanation: 
+The given Python code solves the problem of finding the minimum cut in a flow network, which is a set of edges that, if removed, would disconnect the source node from the sink node. 
+The solution uses the Edmonds-Karp algorithm, an implementation of the Ford-Fulkerson method for computing the maximum flow in the network. 
+The `edmonds_karp` function calculates the maximum flow by repeatedly finding augmenting paths with breadth-first search (BFS) and updating the flow values. 
+After computing the maximum flow, the `min_cut` function identifies the minimum cut by checking which nodes are reachable from the source in the residual graph. The edges that cross from reachable nodes to non-reachable nodes constitute the minimum cut. 
+The code includes an example graph setup and demonstrates how to find and print the edges that form the minimum cut.
