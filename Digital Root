@@ -11,7 +11,7 @@ public class SingleDigitSum {
     }
     
     public static void main(String[] args) {
-        // Example usage
+        // Example case
         System.out.println(singleDigitSum(38));  // Output: 2
     }
 }
