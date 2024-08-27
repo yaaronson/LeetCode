@@ -47,7 +47,7 @@ public class NQueens {
             }
         }
         
-        // Check the diagonal (top-right to bottom-left)
+        // Checks the diagonal (top-right to bottom-left)
         for (int i = row, j = col; i >= 0 && j < board.length; i--, j++) {
             if (board[i][j] == 'Q') {
                 return false;
