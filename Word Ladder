@@ -53,3 +53,7 @@ public class WordLadder {
         System.out.println("Shortest transformation length: " + solution.ladderLength("hit", "cog", wordList2)); // Output: 0
     }
 }
+
+The `WordLadder` class is a solution for finding the shortest sequence of transformations from a starting word to a target word. In this problem, you can only change one letter at a time, and each intermediate word must be a valid entry from a provided list.
+
+Here's how it works: The method `ladderLength` first checks if the target word is in the word list. If it isn’t, the function immediately returns 0, indicating that no transformation is possible. The algorithm uses a breadth-first search approach, starting from the initial word and exploring all possible single-letter changes. Each new word is checked to see if it matches the target word. If a match is found, the function returns the length of the transformation sequence. If not, the method continues exploring, adding each valid new word to a queue for further examination, and removing it from the list to avoid revisiting. If the queue is exhausted without finding the target, the function concludes that a transformation sequence doesn’t exist.
