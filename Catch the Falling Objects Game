@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch the Falling Objects Game</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #87CEEB;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        canvas {
+            border: 2px solid #000;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <script>
+        // Setup canvas and context
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Game variables
+        const paddleWidth = 100;
+        const paddleHeight = 20;
+        const paddleSpeed = 7;
+        const objectSize = 20;
+        const objectSpeed = 2;
+        const objects = [];
+        let paddleX = (canvas.width - paddleWidth) / 2;
+        let rightPressed = false;
+        let leftPressed = false;
+        let score = 0;
+
+        // Event listeners for paddle movement
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') rightPressed = true;
+            if (e.key === 'ArrowLeft') leftPressed = true;
+        });
+
+        document.addEventListener('keyup', (e) => {
+            if (e.key === 'ArrowRight') rightPressed = false;
+            if (e.key === 'ArrowLeft') leftPressed = false;
+        });
+
+        // Function to create a new falling object
+        function createObject() {
+            const x = Math.random() * (canvas.width - objectSize);
+            objects.push({ x, y: -objectSize });
+        }
+
+        // Update the game state
+        function update() {
+            // Move the paddle
+            if (rightPressed && paddleX < canvas.width - paddleWidth) paddleX += paddleSpeed;
+            if (leftPressed && paddleX > 0) paddleX -= paddleSpeed;
+
+            // Update objects
+            for (let i = 0; i < objects.length; i++) {
+                objects[i].y += objectSpeed;
+
+                // Check for collision with the paddle
+                if (objects[i].y + objectSize > canvas.height - paddleHeight &&
+                    objects[i].x < paddleX + paddleWidth &&
+                    objects[i].x + objectSize > paddleX) {
+                    score++;
+                    objects.splice(i, 1);
+                    i--;
+                }
+
+                // Remove objects that fall off the screen
+                if (objects[i].y > canvas.height) {
+                    objects.splice(i, 1);
+                    i--;
+                }
+            }
+
+            // Create new objects periodically
+            if (Math.random() < 0.02) createObject();
+        }
+
+        // Draw everything on the canvas
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw paddle
+            ctx.fillStyle = '#FF4500';
+            ctx.fillRect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
+
+            // Draw falling objects
+            ctx.fillStyle = '#4682B4';
+            for (const obj of objects) {
+                ctx.fillRect(obj.x, obj.y, objectSize, objectSize);
+            }
+
+            // Draw score
+            ctx.fillStyle = '#000';
+            ctx.font = '20px Arial';
+            ctx.fillText('Score: ' + score, 10, 20);
+        }
+
+        // Main game loop
+        function gameLoop() {
+            update();
+            draw();
+            requestAnimationFrame(gameLoop);
+        }
+
+        // Start the game
+        gameLoop();
+    </script>
+</body>
+</html>
