@@ -27,7 +27,7 @@
         const canvas = document.getElementById('gameCanvas');
         const ctx = canvas.getContext('2d');
         
-        // Game variables
+        // Games variables
         const targetSize = 50;
         const targetSpeed = 2;
         let target = { x: 0, y: 0 };
@@ -52,7 +52,7 @@
             }
         });
 
-        // Update the game state
+        // Updates the game state
         function update() {
             // Simple animation of the target
             target.x += targetSpeed;
@@ -82,8 +82,8 @@
             requestAnimationFrame(gameLoop);
         }
 
-        // Initialize the game
-        moveTarget(); // Set initial target position
+        // Initializes the game
+        moveTarget(); // Sets initial target position
         gameLoop();
     </script>
 </body>
