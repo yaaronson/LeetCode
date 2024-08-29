@@ -23,11 +23,11 @@
 <body>
     <canvas id="gameCanvas" width="800" height="600"></canvas>
     <script>
-        // Setup canvas and context
+        //  canvas and context
         const canvas = document.getElementById('gameCanvas');
         const ctx = canvas.getContext('2d');
         
-        // Game variables
+        //  variables
         const paddleWidth = 100;
         const paddleHeight = 20;
         const paddleSpeed = 7;
@@ -56,9 +56,9 @@
             objects.push({ x, y: -objectSize });
         }
 
-        // Update the game state
+        // Updates the game state
         function update() {
-            // Move the paddle
+            // Moves the paddle
             if (rightPressed && paddleX < canvas.width - paddleWidth) paddleX += paddleSpeed;
             if (leftPressed && paddleX > 0) paddleX -= paddleSpeed;
 
