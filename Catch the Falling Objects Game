@@ -113,7 +113,7 @@
             requestAnimationFrame(gameLoop);
         }
 
-        // Start the game
+        // Starts the game
         gameLoop();
     </script>
 </body>
