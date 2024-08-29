@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click the Moving Target Game</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        canvas {
+            border: 2px solid #000;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <script>
+        // Setup canvas and context
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Game variables
+        const targetSize = 50;
+        const targetSpeed = 2;
+        let target = { x: 0, y: 0 };
+        let score = 0;
+
+        // Function to randomly position the target
+        function moveTarget() {
+            target.x = Math.random() * (canvas.width - targetSize);
+            target.y = Math.random() * (canvas.height - targetSize);
+        }
+
+        // Event listener for clicking the target
+        canvas.addEventListener('click', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            if (x >= target.x && x <= target.x + targetSize &&
+                y >= target.y && y <= target.y + targetSize) {
+                score++;
+                moveTarget(); // Move target on click
+            }
+        });
+
+        // Update the game state
+        function update() {
+            // Simple animation of the target
+            target.x += targetSpeed;
+            if (target.x + targetSize > canvas.width || target.x < 0) {
+                targetSpeed *= -1; // Change direction
+            }
+        }
+
+        // Draw everything on the canvas
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw target
+            ctx.fillStyle = '#FF4500';
+            ctx.fillRect(target.x, target.y, targetSize, targetSize);
+
+            // Draw score
+            ctx.fillStyle = '#000';
+            ctx.font = '20px Arial';
+            ctx.fillText('Score: ' + score, 10, 20);
+        }
+
+        // Main game loop
+        function gameLoop() {
+            update();
+            draw();
+            requestAnimationFrame(gameLoop);
+        }
+
+        // Initialize the game
+        moveTarget(); // Set initial target position
+        gameLoop();
+    </script>
+</body>
+</html>
