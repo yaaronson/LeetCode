@@ -24,7 +24,7 @@ public class Solution
             rightMax[i] = Math.Max(rightMax[i + 1], height[i]);
         }
 
-        // Calculate water trapped
+        // Calculates water trapped
         for (int i = 0; i < n; i++)
         {
             waterTrapped += Math.Min(leftMax[i], rightMax[i]) - height[i];
