@@ -33,3 +33,6 @@ public class Solution
         return waterTrapped;
     }
 }
+
+Explanation: 
+The "Trapping Rain Water" problem involves calculating the amount of water that can be trapped between bars of varying heights after rainfall. Each bar is represented by an array where its height is given, and the width between each bar is 1. To solve this, you need to determine how much water each bar can trap based on the tallest bars to its left and right. This is achieved by computing two arrays: one for the maximum height to the left of each bar and another for the maximum height to the right. For each bar, the trapped water is the difference between the minimum of these two maximum heights and the height of the bar itself. Summing up these differences for all bars gives the total amount of trapped water.
