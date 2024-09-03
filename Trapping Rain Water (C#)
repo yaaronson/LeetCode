@@ -10,7 +10,7 @@ public class Solution
         int[] rightMax = new int[n];
         int waterTrapped = 0;
 
-        // Fill leftMax array
+        // Fills leftMax array
         leftMax[0] = height[0];
         for (int i = 1; i < n; i++)
         {
