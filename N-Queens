@@ -16,7 +16,8 @@ public class NQueens {
         solve(solutions, board, 0);
         return solutions;
     }
-    
+
+
     private void solve(List<List<String>> solutions, char[][] board, int row) {
         if (row == board.length) {
             solutions.add(createBoard(board));
