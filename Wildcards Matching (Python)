@@ -25,8 +25,6 @@ def isMatch(s: str, p: str) -> bool:
     return dp[m][n]
 
 Explnation: 
-The problem is to check if a given string matches a pattern that includes wildcards. The wildcard * can match any sequence of characters (including none), while ? matches exactly one character. To solve this, we use a method called dynamic programming.
-
-Imagine you have a table where each cell represents whether a part of the string matches a part of the pattern. You start by setting the cell that represents an empty string matching an empty pattern to True. Then, you fill in the table by checking if the current character in the pattern is *, ?, or a specific character. For *, you check if it matches zero characters or more characters. For ?, you check if it matches one character. Finally, you look at the bottom-right cell of the table to see if the whole string matches the whole pattern.
-
+This problem is to check if a  string matches a pattern that includes wildcards. The wildcard * can match any sequence of characters (including none), while ? matches  one character. 
+We use a method called dynamic programming.
 This method efficiently checks all possible matches by breaking the problem into smaller pieces and solving them step-by-step.
