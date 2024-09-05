@@ -64,7 +64,7 @@ public class SerializeDeserializeBinaryTree {
 
 Explanation: 
 This code converts a binary tree into a string (serialization) and then reconstructs it back into a tree (deserialization). 
-The `TreeNode` class defines the basic structure of a node in a binary tree, with each node containing an integer value (`val`) and pointers to its left and right children (`left` and `right`). 
+The `TreeNode` class defines the basic structure of a node in a binary tree, with each node containing an int value (`val`) and pointers to its left and right children. 
 
 The `serialize` method transforms the binary tree into a string representation. It uses a helper method, `serializeHelper`, to traverse the tree in a pre-order fashion (visit root, then left subtree, then right subtree). 
 During traversal, if a node is `null`, it adds a special marker (`#`) to indicate the absence of a node, followed by a comma. For non-null nodes, it appends the node’s value followed by a comma, and recursively processes the left and right subtrees.
