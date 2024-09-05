@@ -62,7 +62,8 @@ public class SerializeDeserializeBinaryTree {
     }
 }
 
-This Java code illustrates how to convert a binary tree into a string (serialization) and then reconstruct it back into a tree (deserialization). 
+Explnation: 
+This code converts a binary tree into a string (serialization) and then reconstructs it back into a tree (deserialization). 
 
 The `TreeNode` class defines the basic structure of a node in a binary tree, with each node containing an integer value (`val`) and pointers to its left and right children (`left` and `right`). 
 
