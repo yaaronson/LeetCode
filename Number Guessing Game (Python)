@@ -28,7 +28,8 @@ if __name__ == "__main__":
     guessing_game()
 
 Explanation: 
-This code is a simple number guessing game made with python. When you run it, the computer picks a random number between 1 and 100. You have up to 7 tries to guess this number. 
+This code is a simple number guessing game made with python. When you run it, the computer picks a random number between 1 and 100. 
+It gives you have up to 7 tries to guess the number. 
 Each time you make a guess, the computer will tell you if your guess is too high or too low.
 If you guess the number correctly, the game will congratulate you and tell you how many tries it took. 
 If you run out of guesses without getting it right, the game will reveal the number and tell you that you’ve used up all your attempts.
