@@ -23,7 +23,7 @@ public class SimpleCalculator {
             }
             
             if (choice < 1 || choice > 5) {
-                System.out.println("Not Valid. Please enter a number between 1 and 5.");
+                System.out.println("Not Valid! Please kindly enter a number between 1 and 5.");
                 continue;
             }
             
