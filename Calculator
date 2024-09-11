@@ -55,7 +55,7 @@ public class SimpleCalculator {
                     }
                     break;
                 default:
-                    System.out.println("Unexpected error.");
+                    System.out.println("Sory, Unexpected error.");
             }
         }
         
