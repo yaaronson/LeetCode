@@ -6,7 +6,7 @@ public class SimpleCalculator {
         Scanner scanner = new Scanner(System.in);
         
         while (true) {
-            System.out.println("Basic Calculator");
+            System.out.println("Just A Basic Calculator");
             System.out.println("Select operation:");
             System.out.println("1. Addition");
             System.out.println("2. Subtraction");
