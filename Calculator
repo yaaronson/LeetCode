@@ -51,7 +51,7 @@ public class SimpleCalculator {
                         result = num1 / num2;
                         System.out.printf("Result: %.2f\n", result);
                     } else {
-                        System.out.println("Not Valid: Division by zero is not allowed.");
+                        System.out.println("Oops! (Not Valid): Division by zero is not allowed.");
                     }
                     break;
                 default:
