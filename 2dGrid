@@ -16,6 +16,7 @@ public class ShortestPathInGrid {
         int[][] directions = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
         
         // Min-heap priority queue to store the cells to be processed
+
         PriorityQueue<Cell> pq = new PriorityQueue<>(Comparator.comparingInt(cell -> cell.cost));
         pq.offer(new Cell(0, 0, grid[0][0]));
         
