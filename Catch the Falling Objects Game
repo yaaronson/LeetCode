@@ -51,6 +51,7 @@
         });
 
         // Function to create a new falling object
+
         function createObject() {
             const x = Math.random() * (canvas.width - objectSize);
             objects.push({ x, y: -objectSize });
