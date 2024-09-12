@@ -76,6 +76,7 @@
                 }
 
                 // Removes objects that fall off the screen
+
                 if (objects[i].y > canvas.height) {
                     objects.splice(i, 1);
                     i--;
