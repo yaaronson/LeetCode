@@ -83,6 +83,7 @@
             }
 
             // Creates new objects 
+
             if (Math.random() < 0.02) createObject();
         }
 
