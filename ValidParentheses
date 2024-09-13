@@ -38,6 +38,6 @@ This code checks if a string containing different types of brackets is balanced.
 
 - When it finds  an open bracket (like `(`, `{`, or `[`), it adds it to the stack
 - When it finds a closing bracket (like `)`, `}`, or `]`), it checks if there’s an open bracket available in the stack to match it. If the stack is empty or the top bracket doesn’t match, the string is considered not good
-- After processing the entire string, if there are any leftover open brackets in the stack, the string is invalid. If the stack is empty, it means all brackets matched properly, so the string is valid.
+- After processing the entire string, if there are any leftover open brackets in the stack, the string is invalid. If the stack is empty, it means all brackets matched properly, so the string is valid. 
 
 The `main` method demonstrates this by testing the program with different strings to see which are valid or invalid.
