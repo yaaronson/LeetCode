@@ -32,3 +32,5 @@ public class ValidParentheses {
         System.out.println(solution.isValid("{[]}"));   // true
     }
 }
+
+Explnation: 
