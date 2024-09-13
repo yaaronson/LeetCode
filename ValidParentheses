@@ -34,3 +34,10 @@ public class ValidParentheses {
 }
 
 Explnation: 
+This Java program checks if a string containing different types of brackets is balanced. It uses a "stack" to keep track of open brackets. As it examines each character in the string:
+
+- When it encounters an open bracket (like `(`, `{`, or `[`), it adds it to the stack.
+- When it finds a closing bracket (like `)`, `}`, or `]`), it checks if there’s an open bracket available in the stack to match it. If the stack is empty or the top bracket doesn’t match, the string is considered invalid.
+- After processing the entire string, if there are any leftover open brackets in the stack, the string is invalid. If the stack is empty, it means all brackets matched properly, so the string is valid.
+
+The `main` method demonstrates this by testing the program with different strings to see which are valid or invalid.
