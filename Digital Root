@@ -17,7 +17,7 @@ public class SingleDigitSum {
 }
 
 
-Explanation: 
+Explanation:    
 This Java code defines a class called `SingleDigitSum` with a method named `singleDigitSum` that calculates the single-digit sum of a positive integer. 
 The single-digit sum is the result of repeatedly adding the digits of the number until only one digit remains. For example, for the number 38, you add 3 + 8 to get 11, and then add 1 + 1 to get 2. 
 The method uses a formula to find this result directly: it calculates `1 + (n - 1) % 9`. 
