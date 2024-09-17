@@ -36,4 +36,3 @@ public class LongestSubstring {
         System.out.println("Length of the longest substring with at most two distinct characters: " + lengthOfLongestSubstringTwoDistinct(s));
     }
 }
-
