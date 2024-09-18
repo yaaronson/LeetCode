@@ -37,7 +37,7 @@ public class Solution
             }
             else if (maxX > minY)
             {
-                // Move towards the left in nums1
+                // Moves towards the left in nums1
                 high = partitionX - 1;
             }
             else
