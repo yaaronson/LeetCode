@@ -42,7 +42,7 @@ public class Solution
             }
             else
             {
-                // Move towards the right in nums1
+                // Moves towards the right in nums1
                 low = partitionX + 1;
             }
         }
