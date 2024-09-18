@@ -25,7 +25,7 @@ public class Solution
 
             if (maxX <= minY && maxY <= minX)
             {
-                // We have partitioned array at the correct place
+                //  partitions array at the correct place
                 if ((x + y) % 2 == 0)
                 {
                     return (Math.Max(maxX, maxY) + Math.Min(minX, minY)) / 2.0;
