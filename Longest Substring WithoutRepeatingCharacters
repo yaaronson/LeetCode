@@ -25,6 +25,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
         return maxLength;
     }
 
+
     public static void main(String[] args) {
         LongestSubstringWithoutRepeatingCharacters solution = new LongestSubstringWithoutRepeatingCharacters();
         
