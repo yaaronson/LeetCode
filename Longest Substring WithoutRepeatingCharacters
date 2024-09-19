@@ -33,6 +33,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
 
 
     public static void main(String[] args) {
+
         LongestSubstringWithoutRepeatingCharacters solution = new LongestSubstringWithoutRepeatingCharacters();
         
         // Test cases
