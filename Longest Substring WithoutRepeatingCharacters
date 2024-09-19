@@ -21,6 +21,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
             }
             
             // Update the last seen position 
+
             charIndexMap.put(currentChar, end);
             
             // Calculate the length of the current substring
