@@ -75,7 +75,7 @@
             ctx.font = '20px Arial';
             ctx.fillText('Score: ' + score, 10, 20);
         }
-
+//main game loop
         function gameLoop() {
             update();
             draw();
