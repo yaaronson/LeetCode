@@ -76,9 +76,6 @@
             ctx.fillText('Score: ' + score, 10, 20);
         }
 
-
-        // Main game loop
-
         function gameLoop() {
             update();
             draw();
