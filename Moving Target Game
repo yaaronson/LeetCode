@@ -33,6 +33,7 @@
         let target = { x: 0, y: 0 };
         let score = 0;
 
+
         // Function to randomly position the target
         function moveTarget() {
             target.x = Math.random() * (canvas.width - targetSize);
