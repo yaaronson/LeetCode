@@ -6,6 +6,7 @@
     <title>Click the Moving Target Game</title>
     <style>
         body {
+
             margin: 0;
             overflow: hidden;
             background-color: #f0f0f0;
