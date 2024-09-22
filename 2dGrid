@@ -1,6 +1,5 @@
 import java.util.*;
 
-
 public class ShortestPathInGrid {
     static class Cell {
         int row, col, cost;
