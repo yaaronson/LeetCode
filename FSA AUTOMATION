@@ -47,9 +47,10 @@ if __name__ == "__main__":
 When you run the script, it will test several binary strings and print whether each is accepted by the automation
 
 Explanation:
-The code is a simple program that acts like a machine to check binary strings (made of 0s and 1s). It decides if a string has an even number of 0s. The machine has two states:
+The code is a simple program that acts like a machine to check binary strings (0s and 1s). It decides if a string has an even number of 0s. The machine has two states:
 
 State q0 means it has seen an even number of 0s.
 State q1 means it has seen an odd number of 0s.
+
 It starts in state q0. When it reads a 0, it switches to q1, and if it reads another 0, it goes back to q0. If it reads a 1, it stays in the same state. 
 At the end, if the machine is in state q0, it accepts the string as valid. You can put this code on GitHub for others to see and use!
