@@ -45,3 +45,6 @@ if __name__ == "__main__":
 
 
 When you run the script, it will test several binary strings and print whether each is accepted by the automation
+
+Explanation:
+
