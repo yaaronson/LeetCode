@@ -20,6 +20,7 @@ class FSA:
             elif input_symbol == '1':
                 self.current_state = 'q1'
 
+
     def reset(self):
         self.current_state = self.start_state
 
