@@ -31,6 +31,7 @@ class FSA:
             self.transition(symbol)
         return self.current_state in self.accept_states
 
+
 if __name__ == "__main__":
     fsa = FSA()
     test_strings = ['00', '01', '10', '11', '000', '001', '010', '011', '100', '101', '110', '111']
