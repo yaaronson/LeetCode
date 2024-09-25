@@ -24,6 +24,7 @@ class FSA:
     def reset(self):
         self.current_state = self.start_state
 
+
     def process_string(self, input_string):
         self.reset()
         for symbol in input_string:
