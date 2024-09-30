@@ -48,6 +48,7 @@ public class ShortestPathInGrid {
         return -1;
     }
 
+
     public static void main(String[] args) {
         ShortestPathInGrid solution = new ShortestPathInGrid();
         int[][] grid = {
