@@ -61,6 +61,7 @@ public class ShortestPathInGrid {
     }
 }
 
+
 Explanation:
 The ShortestPathInGrid Java code finds the shortest path through a grid where each cell has a cost, and some cells might be blocked. 
 It uses a priority queue to explore the grid, starting from the top-left corner and aiming to reach the bottom-right corner with the minimal cost. 
