@@ -16,7 +16,8 @@ public class SimpleCalculator {
             System.out.print("Enter choice (1-5): ");
             
             int choice = scanner.nextInt();
-            
+
+
             if (choice == 5) {
                 System.out.println("Exiting....");
                 break;
