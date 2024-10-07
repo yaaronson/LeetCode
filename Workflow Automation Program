@@ -1,0 +1,92 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class WorkflowAutomationApp {
+
+    // Task class to represent a task
+    public static class Task {
+        private String id;
+        private String description;
+        private String status; // e.g., "Pending", "In Progress", "Completed"
+
+        public Task(String id, String description) {
+            this.id = id;
+            this.description = description;
+            this.status = "Pending";
+        }
+
+        public String getId() {
+            return id;
+        }
+
+        public String getDescription() {
+            return description;
+        }
+
+        public String getStatus() {
+            return status;
+        }
+
+        public void setStatus(String status) {
+            this.status = status;
+        }
+    }
+
+    // Workflow interface to define workflow operations
+    public interface Workflow {
+        void addTask(Task task);
+        void processTasks();
+        List<Task> getTasks();
+    }
+
+    // Concrete implementation of the Workflow
+    public static class SimpleWorkflow implements Workflow {
+        private List<Task> tasks;
+
+        public SimpleWorkflow() {
+            tasks = new ArrayList<>();
+        }
+
+        @Override
+        public void addTask(Task task) {
+            tasks.add(task);
+            System.out.println("Added task: " + task.getDescription());
+        }
+
+        @Override
+        public void processTasks() {
+            for (Task task : tasks) {
+                if (task.getStatus().equals("Pending")) {
+                    task.setStatus("In Progress");
+                    System.out.println("Processing task: " + task.getDescription());
+                    // Simulate processing
+                    task.setStatus("Completed");
+                    System.out.println("Completed task: " + task.getDescription());
+                }
+            }
+        }
+
+        @Override
+        public List<Task> getTasks() {
+            return tasks;
+        }
+    }
+
+    // Main method to run the application
+    public static void main(String[] args) {
+        SimpleWorkflow workflow = new SimpleWorkflow();
+
+        // Adding tasks to the workflow
+        workflow.addTask(new Task("1", "Design database schema"));
+        workflow.addTask(new Task("2", "Implement REST API"));
+        workflow.addTask(new Task("3", "Write unit tests"));
+
+        // Processing tasks
+        workflow.processTasks();
+
+        // Displaying all tasks
+        for (Task task : workflow.getTasks()) {
+            System.out.println("Task ID: " + task.getId() + ", Description: " + task.getDescription() + ", Status: " + task.getStatus());
+        }
+    }
+}
