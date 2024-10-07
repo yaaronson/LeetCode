@@ -97,7 +97,7 @@ To run this  program, Copy the provided code into a file named WorkflowAutomatio
 Next, you need to open a terminal or command prompt, go to the directory where the file is saved, and compile the program by executing the command javac WorkflowAutomationApp.java. 
 Once the compilation is successful, you can run the program with the command java WorkflowAutomationApp.
 
-When you run the program, you should see output similar to the following:
+When you run the program, you should see output like this: 
 
 yaml
 Copy code
