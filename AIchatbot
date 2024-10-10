@@ -40,6 +40,5 @@ Run the Program: After compiling, run the program with:
 bash
 Copy code
 java SimpleChatbot
-Interact with the Chatbot: Start chatting with the bot! Type your questions and see how it responds.
+Interact with the Chatbot: Start chatting with the bot, Type your questions and see how it responds.
 
-Feel free to expand its capabilities by adding more rules or integrating APIs for enhanced features!
