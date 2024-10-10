@@ -35,16 +35,6 @@ public class SimpleChatbot {
 
 More Details: 
 
-How to Run
-Install Java: Make sure you have Java installed on your computer. You can download it from the official Oracle website.
-
-Save the Code: Copy the code into a file named SimpleChatbot.java.
-
-Compile the Program: Open your terminal (or command prompt) and navigate to the directory where you saved the file. Run:
-
-bash
-Copy code
-javac SimpleChatbot.java
 Run the Program: After compiling, run the program with:
 
 bash
