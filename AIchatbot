@@ -37,10 +37,11 @@ public class SimpleChatbot {
 
 More Details: 
 
-Run the Program: After compiling, run the program with:
+Run the program with:
 
 bash
 Copy code
 java SimpleChatbot
-Interact with the Chatbot: Start chatting with the bot, Type your questions and see how it responds.
+
+Then start interacting - Type your questions and see how it responds!
 
