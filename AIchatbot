@@ -38,8 +38,6 @@ public class SimpleChatbot {
 
 How To Run: 
 
-Run the program with:
-
 bash
 Copy code
 java SimpleChatbot
