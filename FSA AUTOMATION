@@ -1,5 +1,4 @@
 
-
 class FSA:
     def __init__(self):
         # Define states
