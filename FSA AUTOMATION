@@ -8,6 +8,7 @@ class FSA:
         self.current_state = self.start_state
 
 
+
     def transition(self, input_symbol):
         if self.current_state == 'q0':
             if input_symbol == '0':
