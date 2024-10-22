@@ -1,1 +1,111 @@
+using System;
+using System.Collections.Generic;
+
+public class Solution
+{
+    public IList<IList<string>> FindLadders(string beginWord, string endWord, IList<string> wordList)
+    {
+        var wordSet = new HashSet<string>(wordList);
+        var result = new List<IList<string>>();
+        
+        if (!wordSet.Contains(endWord)) return result;
+
+        var graph = new Dictionary<string, List<string>>();
+        var visited = new HashSet<string>();
+        var found = false;
+
+        // BFS to build the graph
+        var queue = new Queue<string>();
+        queue.Enqueue(beginWord);
+        visited.Add(beginWord);
+
+        while (queue.Count > 0 && !found)
+        {
+            var localVisited = new HashSet<string>();
+            int count = queue.Count;
+
+            for (int i = 0; i < count; i++)
+            {
+                var word = queue.Dequeue();
+
+                foreach (var neighbor in GetNeighbors(word, wordSet))
+                {
+                    if (!visited.Contains(neighbor))
+                    {
+                        if (!localVisited.Contains(neighbor))
+                        {
+                            localVisited.Add(neighbor);
+                        }
+
+                        if (!graph.ContainsKey(word))
+                        {
+                            graph[word] = new List<string>();
+                        }
+                        graph[word].Add(neighbor);
+
+                        if (neighbor == endWord)
+                        {
+                            found = true;
+                        }
+
+                        queue.Enqueue(neighbor);
+                    }
+                }
+            }
+
+            visited.UnionWith(localVisited);
+        }
+
+        // DFS to find all paths
+        var path = new List<string>();
+        DFS(beginWord, endWord, graph, path, result);
+
+        return result;
+    }
+
+    private List<string> GetNeighbors(string word, HashSet<string> wordSet)
+    {
+        var neighbors = new List<string>();
+        char[] chars = word.ToCharArray();
+
+        for (int i = 0; i < chars.Length; i++)
+        {
+            char originalChar = chars[i];
+            for (char c = 'a'; c <= 'z'; c++)
+            {
+                if (c != originalChar)
+                {
+                    chars[i] = c;
+                    var newWord = new string(chars);
+                    if (wordSet.Contains(newWord))
+                    {
+                        neighbors.Add(newWord);
+                    }
+                }
+            }
+            chars[i] = originalChar; // revert back
+        }
+
+        return neighbors;
+    }
+
+    private void DFS(string currentWord, string endWord, Dictionary<string, List<string>> graph, List<string> path, IList<IList<string>> result)
+    {
+        path.Add(currentWord);
+
+        if (currentWord == endWord)
+        {
+            result.Add(new List<string>(path));
+        }
+        else if (graph.ContainsKey(currentWord))
+        {
+            foreach (var neighbor in graph[currentWord])
+            {
+                DFS(neighbor, endWord, graph, path, result);
+            }
+        }
+
+        path.RemoveAt(path.Count - 1);
+    }
+}
 
