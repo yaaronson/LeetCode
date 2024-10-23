@@ -26,3 +26,5 @@ The method uses a formula to find this result directly: it calculates `1 + (n - 
 
 This formula is based on a mathematical property that simplifies finding the single-digit sum. The `main` method shows an example where it prints the result of `singleDigitSum` for the number 38, which is 2.
 
+
+
