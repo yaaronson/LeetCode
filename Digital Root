@@ -1,5 +1,4 @@
 
-
 public class SingleDigitSum {
     public static int singleDigitSum(int n) {
         // Handle the case when n is 0 (though n is always positive in this problem)
