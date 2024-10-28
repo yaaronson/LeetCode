@@ -30,4 +30,5 @@ The `MajorityElement` method is designed to find the most frequently occurring e
 As it iterates through the array, it updates the dictionary with the count of each number.
 If the number is already in the dictionary, its count is incremented; if not, it is added with a count of 1. Once all elements are processed, the method determines the highest count from the dictionary and returns it. 
 However, it's important to note that this implementation returns the highest frequency count rather than the actual majority element itself. 
+
 For a complete solution, the method should return the number associated with the highest count instead.
