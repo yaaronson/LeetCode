@@ -6,6 +6,7 @@ public class TrappingRainWater {
         if (height == null || height.length == 0) {
 
             return 0;
+
         }
 
 
