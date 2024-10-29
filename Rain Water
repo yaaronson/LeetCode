@@ -41,3 +41,5 @@ public class TrappingRainWater {
         System.out.println("Water trapped: " + trap(height)); // Output: 6
     }
 }
+
+
