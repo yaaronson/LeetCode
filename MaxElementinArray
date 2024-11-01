@@ -4,6 +4,7 @@ public class Solution
 
     {
 
+
         Dictionary<int, int> myDictionary= new Dictionary<int, int>();
         for (int i = 0; i < nums.Length; i++)
         {
