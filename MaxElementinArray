@@ -1,6 +1,7 @@
 public class Solution
 {
     public int MajorityElement(int[] nums)
+
     {
 
         Dictionary<int, int> myDictionary = new Dictionary<int, int>();
