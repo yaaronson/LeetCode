@@ -21,6 +21,7 @@
     </style>
 </head>
 <body>
+
     <canvas id="gameCanvas" width="800" height="600"></canvas>
     <script>
         //  canvas and context
