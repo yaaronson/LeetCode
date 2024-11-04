@@ -6,6 +6,7 @@
     <title>Catch the Falling Objects Game</title>
     <style>
         body {
+
             margin: 0;
             overflow: hidden;
             background-color: #87CEEB;
