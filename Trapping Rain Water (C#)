@@ -1,5 +1,6 @@
 public class Solution
 {
+
     public int Trap(int[] height)
     {
         if (height == null || height.Length == 0)
