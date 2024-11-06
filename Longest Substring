@@ -1,6 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
+
 public class LongestSubstring {
     
     public static int lengthOfLongestSubstringTwoDistinct(String s) {
