@@ -1,6 +1,5 @@
 using System;
 
-
 public class Program
 {
     public static int ConsecutiveDigitSum(int n)
