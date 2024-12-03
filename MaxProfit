@@ -1,6 +1,5 @@
 //Best day to buy a stock problem
 
-
 public class Solution
 {
     public int MaxProfit(int[] prices)
