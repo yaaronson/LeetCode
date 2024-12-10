@@ -5,6 +5,7 @@ public class TrappingRainWater {
         }
 
 
+
         int left = 0, right = height.length - 1;
         int leftMax = 0, rightMax = 0;
         int waterTrapped = 0;
