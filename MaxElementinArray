@@ -27,7 +27,6 @@ public class Solution
     }
 }
 
-
 The `MajorityElement` method is designed to find the most frequently occurring element in an array. It begins by creating a dictionary to keep track of the frequency of each number. 
 As it iterates through the array, it updates the dictionary with the count of each number.
 If the number is already in the dictionary, its count is incremented; if not, it is added with a count of 1. Once all elements are processed, the method determines the highest count from the dictionary and returns it. 
