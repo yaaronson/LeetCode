@@ -2,6 +2,7 @@ def minDifference(scores: List[int]) -> int:
     if len(scores) < 2:
         return 0
 
+
     scores.sort()
     min_diff = float('inf')
     
