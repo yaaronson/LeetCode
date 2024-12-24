@@ -1,7 +1,6 @@
 
 class FSA:
     def __init__(self):
-
         # Define states
         self.states = {'q0', 'q1'}
         self.start_state = 'q0'
