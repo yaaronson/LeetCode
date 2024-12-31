@@ -1,6 +1,5 @@
 import java.util.*;
 
-
 public class SerializeDeserializeBinaryTree {
     // TreeNode definition
     static class TreeNode {
